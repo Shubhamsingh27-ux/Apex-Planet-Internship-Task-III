@@ -7,7 +7,7 @@ The app dynamically presents questions, tracks scores in real time, and provides
 
 - 📊 Score calculation and result display at the end of the quiz
 
--⚡ Interactive UI with timer-based questions (optional)
+- ⚡ Interactive UI with timer-based questions (optional)
 
 - 🎨 Modern styling using CSS for engaging user experience
 
