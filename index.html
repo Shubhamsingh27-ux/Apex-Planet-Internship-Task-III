@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <header class="card" role="banner" aria-label="App Header">
+            <h1><span class="brand">QuizCraft</span> - Advanced Styling & JavaScript</h1>
+            <div class="actions">
+                <button id="btnJokeTop" class="btn ghost" title="Grab a quick joke">Need a Joke?</button>
+                <button id="btnRestartAll" class="btn secondary" title="Reset app">Reset</button>
+
+            </div>
+        </header>
+
+        <section id="view-settings" class="card settings" aria-labelledby="settings-title">
+            <h2 id="settings-title" class="muted" >Start a new quiz</h2>
+            <div class="grid">
+                <div>
+                    <label for="amount">Number of Questions</label>
+                    <input id="amount" type="number" min="3" max="20" value="10" />
+                </div>
+                <div>
+                    <label for="category">Category</label>
+                    <select id="category">
+                        <option value="">Any Category</option>
+                        <option value="9">General Knowledge</option>
+                        <option value="18">Science: Computers</option>
+                        <option value="21">Sports</option>
+                        <option value="23">History</option>
+                        <option value="27">Animals</option>
+                    </select>
+                    </div>
+                    <div>
+                        <label for="difficulty">Difficulty</label>
+                        <select id="difficulty">
+                            <option value="">Any</option>
+                            <option value="easy">Easy</option>
+                            <option value="medium">Medium</option>
+                            <option value="hard">Hard</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="type">Type</label>
+                        <select id="type">
+                            <option value="multiple">Multiple Choice</option>
+                            <option value="boolean">True / False</option>
+                        </select>
+                    </div>
+                </div> 
+                <div class="actions" >
+                    <button id="btnStart" class="btn" aria-label="Start Quiz">Start Quiz</button>
+                    <button id="btnSample" class="btn secondary" title="Try 5 quick computer questions">Quick Sample</button>
+                </div> 
+                <div class="joke" id="jokeBoxSettings" aria-live="polite"></div>
+        </section>
+
+        <section id="view-quiz" class="card quiz hidden" aria-live="polite">
+            <div class="progress" aria-label="Progress"><div id="bar"></div></div>
+            <div class="question-top">
+                <div class="meta" id="meta"></div>
+                <div class="meta" id="timer" aria-live="polite"></div>
+            </div>
+            <div class="question" id="question"></div>
+            <div class="answers" id="answers" role="group" aria-label="Answers"></div>
+            <div class="footer">
+                <button id="btnPrev" class="btn secondary">Previous</button>
+                <div class="actions">
+                    <button id="btnJoke" class="btn ghost">Need a joke</button>
+                    <button id="btnNext" class="btn">Next</button>
+                </div>
+            </div>
+            <div class="joke" id="jokeBox"></div>
+        </section>
+
+        <section id="view-result" class="card result hidden" aria-live="polite">
+            <h2>Results</h2>
+            <div class="score" id="score"></div>
+            <p class="muted" id="detail"></p>
+            <div class="actions" >
+                <button id="btnRestart" class="btn">Restart</button>
+                <button id="btnSetting" class="btn secondary">Change Settings</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
